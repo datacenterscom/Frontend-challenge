@@ -45,17 +45,14 @@ src/
 ```graphql
 # Get all characters
 query {
-  characters (page:1 ) {
-    info {
-      count
-      pages
-      next
-    }
+  characters   {
     results {
+      id
       name
-      species
-      image
       status
+      species
+      type
+      gender
     }
   }
 }
@@ -66,10 +63,13 @@ query {
 **Service Layer Example:**
 ```typescript
 // services/charactersService.ts
-export const characterstService = {
-  async listCharacters() {
-    // GraphQL query implementation
-  },
+export class CharacterService {
+  /**
+   * Fetch all characters from the Rick & Morty API
+   * @returns Promise with characters data
+   */
+  static async getCharacters(){
+  }
 }
 ```
 
@@ -83,9 +83,7 @@ export const characterstService = {
 - **ESLint + Prettier** for code quality
 
 #### 4.2 Performance Optimizations (Choose at least 2)
-- `React.memo()` for components with static props
-- `useMemo()` or `useCallback()` for expensive calculations
-- Code splitting with `dynamic()` imports for client detail view
+
 - Image optimization with Next.js `Image` component
 - Proper loading states and skeleton screens
 
