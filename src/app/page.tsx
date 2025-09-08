@@ -8,8 +8,7 @@ export default function HomePage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Welcome to the Rick & Morty character explorer. Your task is to
-            build a character listing and detail view using the provided GraphQL
-            setup.
+            build a character listing using the provided GraphQL setup.
           </p>
         </header>
 
@@ -31,7 +30,6 @@ export default function HomePage() {
               <ol className="list-decimal list-inside space-y-1 text-blue-800">
                 <li>Create character listing components</li>
                 <li>Implement search and filtering</li>
-                <li>Build character detail pages</li>
                 <li>Add proper loading and error states</li>
                 <li>Ensure responsive design</li>
               </ol>
